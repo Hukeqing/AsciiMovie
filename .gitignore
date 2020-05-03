@@ -38,3 +38,6 @@ cmake-build-release
 
 # Other
 *.asv
+*.mp4
+*.jpg
+*.txt

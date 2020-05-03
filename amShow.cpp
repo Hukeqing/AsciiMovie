@@ -60,8 +60,6 @@ void input() {
         while (file.get(a)) {
             file.get(b);
             cnt = b;
-            assert(a == '#' || a == '@' || a == '&' || a == '$' || a == '=' || a == '+' || a == '*' || a == '-' ||
-                   a == ':' || a == '.');
             while (cnt) {
                 if (cnt >= w - curW) {
                     movie.back() += string(w - curW, a) + '\n';
@@ -83,15 +81,16 @@ void input() {
     }
 }
 
-int main() {
+int main(int argc, char** argv) {
 #ifdef DEBUG
     in_file = "mov.asv";
     per = 30;
-    freopen("out.txt", "w", stdout);
+    freopen("out2.txt", "w", stdout);
 #else
     get_args(argc, argv);
 #endif
     input();
+    movie.pop_back();
     int cnt = 0;
     system("cls");
     HANDLE hOut = GetStdHandle(STD_OUTPUT_HANDLE);
